@@ -1,0 +1,7 @@
+.navbar-brand {
+  background: url(../img/logo.png) 0 10px no-repeat;
+  background-size: 100%;
+  text-indent: -9999px;
+  height: 65px;
+  width: 200px;
+}

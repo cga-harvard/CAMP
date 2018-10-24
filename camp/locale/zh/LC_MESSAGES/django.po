@@ -1,0 +1,1231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-14 05:10-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: wm_extra/accounts/forms.py:32 camp/templates/base.html:155
+#: camp/templates/base.html.py:156
+msgid "Username"
+msgstr "用户名"
+
+#: wm_extra/accounts/forms.py:38 camp/templates/base.html:159
+#: camp/templates/base.html.py:160
+msgid "Password"
+msgstr "密码"
+
+#: wm_extra/accounts/forms.py:42
+msgid "Password (again)"
+msgstr "确认密码"
+
+#: wm_extra/accounts/forms.py:46
+#: camp/templates/people/profile_detail.html:73
+msgid "Email"
+msgstr "Email"
+
+#: wm_extra/accounts/forms.py:57
+msgid "Yes"
+msgstr "是的"
+
+#: wm_extra/accounts/forms.py:57
+msgid "No"
+msgstr "不是"
+
+#: wm_extra/accounts/forms.py:61
+msgid "Are you affiliated with Zhejiang University?"
+msgstr "是否从属于浙江大学？"
+
+#: wm_extra/accounts/forms.py:64
+msgid "I agree to the <a href='/aboutus/#disclaimer'>Terms and Conditions</a>"
+msgstr "<a href='/aboutus/#disclaimer'>我已阅读并同意相关条款</a>"
+
+#: wm_extra/accounts/forms.py:67
+msgid "Usernames can only contain letters, numbers, dots and underscores."
+msgstr "用户名只能包含字母、数字、标点和下划线。"
+
+#: wm_extra/accounts/forms.py:75
+msgid "This username is already taken. Please choose another."
+msgstr "该用户名已存在，请使用其他用户名。"
+
+#: wm_extra/accounts/forms.py:82
+msgid "A user is registered with this email address."
+msgstr "该邮件地址已被其他用户注册。"
+
+#: wm_extra/accounts/forms.py:87
+msgid "You must type the same password each time."
+msgstr "密码和确认密码不一致。"
+
+#: wm_extra/accounts/views.py:42
+#, python-brace-format
+msgid "Confirmation email sent to {email}."
+msgstr "确认邮件已经发送至{email}。"
+
+#: wm_extra/accounts/views.py:46
+#, python-brace-format
+msgid "The code {code} is invalid."
+msgstr "该验证码{code}是无效的。"
+
+#: wm_extra/models.py:11 wm_extra/models.py:21
+msgid "Visits"
+msgstr "访问量"
+
+#: wm_extra/models.py:12 wm_extra/models.py:22
+msgid "Unique Visitors"
+msgstr "访客量"
+
+#: wm_extra/models.py:23
+msgid "Downloads"
+msgstr "下载"
+
+#: wm_extra/models.py:34
+msgid "Describe Map Service"
+msgstr "描述地图服务"
+
+#: wm_extra/models.py:35
+msgid "Map service URL"
+msgstr "地图服务地址"
+
+#: wm_extra/templates/wm_extra/endpoint_add.html:6
+msgid "Suggests an Endpoint"
+msgstr "建议一个端点"
+
+#: wm_extra/templates/wm_extra/endpoint_add.html:13
+msgid "Submit Map Service URL"
+msgstr "提交地图服务地址"
+
+#: wm_extra/templates/wm_extra/endpoint_add.html:16
+msgid ""
+"Please describe the type of mapping within the map service (i.e. roads, "
+"water features, historic maps, satellite imagery, etc.), the name of the "
+"organization hosting the map service, the source of the data, and the year "
+"or year range the data represents."
+msgstr ""
+"请描述地图服务的制图类型（比如道路、河流要素、历史地图、卫星影像等等），管理地图服务的机构，"
+"数据的来源，数据代表的年份或者年份范围。"
+
+
+#: wm_extra/templates/wm_extra/endpoint_add.html:17
+msgid ""
+"Service harvesting and loading to WorldMap is currently a manual process so "
+"it may take some time for your map service layers to appear in search."
+msgstr "服务获取并加载至世界地图，目前还是一个手动操作的过程。"
+"所以地图服务图层搜索结果的呈现可能会花费一段时间"
+
+#: wm_extra/templates/wm_extra/endpoint_add.html:18
+msgid ""
+"The system currently supports OGC WMS and CSW, as well as Esri Image and Map "
+"service endpoint types. If you are not sure what you have, feel free to "
+"submit it and we will attempt to load it."
+msgstr ""
+"该系统现在支持OGC、WMS、CSW和Esri Image和 Map "
+"Service Endpoint Types。如果不确定您的服务是什么，您"
+"可以提交它，随后我们将会尝试加载它。"
+#: wm_extra/templates/wm_extra/endpoint_add.html:19
+msgid ""
+"Write us at worldmap@harvard.edu if you have any questions.  Thank you for "
+"your contribution."
+msgstr ""
+"如果您有任何问题，请写邮件给我们worldmap@harvard.edu,非常感谢您的贡献。"
+
+#: wm_extra/templates/wm_extra/endpoint_add.html:23
+msgid "Submit map service URL"
+msgstr "提交地图服务地址"
+
+#: wm_extra/templates/wm_extra/endpoint_added.html:6
+#: wm_extra/templates/wm_extra/endpoint_added.html:13
+msgid "Endpoint Suggested"
+msgstr "端点建议"
+
+#: wm_extra/templates/wm_extra/endpoint_added.html:16
+msgid "Thanks"
+msgstr "谢谢"
+
+#: wm_extra/templates/wm_extra/endpoint_added.html:16
+msgid "for suggesting the endpoint"
+msgstr "对于建议端点"
+
+#: camp/certification/templates/certification/certification_add.html:13
+msgid "Are you sure you want to certify"
+msgstr "您确定您想要认证"
+
+#: camp/certification/templates/certification/certification_add.html:16
+msgid "Yes, certify"
+msgstr "是的，认证"
+
+#: camp/certification/templates/certification/certification_add.html:19
+#: camp/certification/templates/certification/certification_remove.html:22
+msgid "No, cancel"
+msgstr "不了，取消"
+
+#: camp/certification/templates/certification/certification_add.html:30
+msgid "Certify"
+msgstr "认证"
+
+#: camp/certification/templates/certification/certification_remove.html:16
+msgid "Are you sure you want to uncertify"
+msgstr "您确定您不想要认证"
+
+#: camp/certification/templates/certification/certification_remove.html:19
+msgid "Yes, uncertify"
+msgstr "是的，不认证"
+
+#: camp/certification/templates/certification/certification_remove.html:33
+msgid "Uncertify"
+msgstr "不认证"
+
+#: camp/templates/base.html:53 camp/templates/site_index.html:54
+msgid "Create Map"
+msgstr "创建地图"
+
+#: camp/templates/base.html:54 camp/templates/maps/map_detail.html:163
+#: camp/templates/site_index.html:55
+msgid "View Map"
+msgstr "查看地图"
+
+#: camp/templates/base.html:58
+msgid "Profile"
+msgstr "个人简介"
+
+#: camp/templates/base.html:59
+msgid "Recent Activity"
+msgstr "最近活动"
+
+#: camp/templates/base.html:60
+msgid "Inbox"
+msgstr "收件箱"
+
+#: camp/templates/base.html:65
+msgid "Help"
+msgstr "帮助"
+
+#: camp/templates/base.html:71 camp/templates/base.html.py:146
+#: camp/templates/base.html:167
+msgid "Sign in"
+msgstr "登录"
+
+#: camp/templates/base.html:111
+msgid "Need Help?"
+msgstr "帮助"
+
+#: camp/templates/base.html:112
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: camp/templates/base.html:113
+msgid "Source Code"
+msgstr "源代码"
+
+#: camp/templates/base.html:114
+msgid "Report Copyright Infringement"
+msgstr "报告侵权"
+
+#: camp/templates/base.html:115
+msgid "Copyright 2017 &copy; The President and Fellows of Harvard College"
+msgstr "版权 2017 &copy; 哈佛大学的主席和他的同事"
+
+#: camp/templates/base.html:118
+msgid "Language"
+msgstr "语言"
+
+#: camp/templates/base.html:151
+msgid "Register"
+msgstr "注册"
+
+#: camp/templates/base.html:163
+msgid "Remember Me"
+msgstr "记住我"
+
+#: camp/templates/base.html:204
+msgid "Type your search here ..."
+msgstr "在这输入关键词......"
+
+#: camp/templates/base.html:140
+msgid "<a href='%(STATIC_URL)sdocs/Camp_Help_en.pdf'>Camp Help</a>"
+msgstr "<a href='%(STATIC_URL)sdocs/Camp_Help_zh.pdf'>帮助文档</a>"
+msgid "<a href='%(STATIC_URL)sdocs/Camp_Help_Simplified_zh.pdf'>Camp Help(Simplified Version)</a>"
+msgstr "<a href='%(STATIC_URL)sdocs/Camp_Help_Simplified_zh.pdf'>帮助文档简化版</a>"
+
+#: camp/templates/base.html:142
+msgid "GeoNode Help"
+msgstr "GeoNode简介"
+#: camp/templates/base/_resourcebase_snippet.html:44
+#: camp/templates/layers/layer_detail.html:453
+msgid "Create a Map"
+msgstr "创建地图"
+
+#: camp/templates/createlayer/layer_create.html:7
+#: camp/templates/site_index.html:58
+msgid "Create Layer"
+msgstr "创建图层"
+
+#: camp/templates/createlayer/layer_create.html:20
+msgid "Create an empty layer"
+msgstr "创建空图层"
+
+#: camp/templates/createlayer/layer_create.html:38
+msgid "Add Attribute"
+msgstr "添加属性"
+
+#: camp/templates/createlayer/layer_create.html:45
+msgid "Create"
+msgstr "创建"
+
+#: camp/templates/createlayer/layer_create.html:54
+#: camp/templates/layers/layer_detail.html:511
+#: camp/templates/maps/map_detail.html:202
+#: camp/templates/upload/layer_upload.html:118
+msgid "Permissions"
+msgstr "许可"
+
+#: camp/templates/fullscreen.html:5
+msgid "WorldMap"
+msgstr "世界地图"
+
+#: camp/templates/layers/layer_detail.html:67
+msgid "Filter Granules"
+msgstr "过滤颗粒"
+
+#: camp/templates/layers/layer_detail.html:70
+msgid "Active Filter:"
+msgstr "激活过滤器"
+
+#: camp/templates/layers/layer_detail.html:76
+msgid "Granule ID"
+msgstr "颗粒ID"
+
+#: camp/templates/layers/layer_detail.html:77
+msgid "Bounding Box"
+msgstr "包围盒"
+
+#: camp/templates/layers/layer_detail.html:78
+msgid "Time"
+msgstr "时间"
+
+#: camp/templates/layers/layer_detail.html:79
+msgid "Elevation"
+msgstr "高程"
+
+#: camp/templates/layers/layer_detail.html:80
+msgid "Actions"
+msgstr "操作"
+
+#: camp/templates/layers/layer_detail.html:142
+msgid "Dimension"
+msgstr "维度"
+
+#: camp/templates/layers/layer_detail.html:143
+msgid "Enabled"
+msgstr "可用的"
+
+#: camp/templates/layers/layer_detail.html:144
+msgid "Regex"
+msgstr "正则表达式"
+
+#: camp/templates/layers/layer_detail.html:149
+msgid "TIME"
+msgstr "时间"
+
+#: camp/templates/layers/layer_detail.html:150
+#: camp/templates/layers/layer_detail.html:155
+msgid "True"
+msgstr "正确"
+
+#: camp/templates/layers/layer_detail.html:150
+#: camp/templates/layers/layer_detail.html:155
+msgid "False"
+msgstr "错误"
+
+#: camp/templates/layers/layer_detail.html:154
+msgid "ELEVATION"
+msgstr "高程"
+
+#: camp/templates/layers/layer_detail.html:165
+msgid "Attribute Name"
+msgstr "属性名"
+
+#: camp/templates/layers/layer_detail.html:166
+#: camp/templates/layers/layer_metadata_advanced.html:105
+msgid "Label"
+msgstr "标签"
+
+#: camp/templates/layers/layer_detail.html:167
+#: camp/templates/layers/layer_metadata_advanced.html:106
+#: camp/templates/people/profile_detail.html:107
+msgid "Description"
+msgstr "描述"
+
+#: camp/templates/layers/layer_detail.html:169
+msgid "Range"
+msgstr "范围"
+
+#: camp/templates/layers/layer_detail.html:170
+msgid "Average"
+msgstr "平均值"
+
+#: camp/templates/layers/layer_detail.html:171
+msgid "Median"
+msgstr "中位数"
+
+#: camp/templates/layers/layer_detail.html:172
+msgid "Standard Deviation"
+msgstr "标准偏差"
+
+#: camp/templates/layers/layer_detail.html:233
+msgid "Rate this layer"
+msgstr "给该图层评分"
+
+#: camp/templates/layers/layer_detail.html:237
+#: camp/templates/maps/map_detail.html:74
+msgid "Average Rating"
+msgstr "平均评分"
+
+#: camp/templates/layers/layer_detail.html:254
+#: camp/templates/layers/layer_detail.html:267
+msgid "Download Layer"
+msgstr "下载图层"
+
+#: camp/templates/layers/layer_detail.html:257
+msgid "Request Download"
+msgstr "请求下载"
+
+#: camp/templates/layers/layer_detail.html:306
+#: camp/templates/layers/layer_detail.html:370
+#: camp/templates/layers/layer_detail.html:416
+#: camp/templates/maps/map_detail.html:112
+#: camp/templates/maps/map_detail.html:156
+msgid "Close"
+msgstr "关闭"
+
+#: camp/templates/layers/layer_detail.html:318
+#: camp/templates/maps/map_detail.html:94
+msgid "Metadata Detail"
+msgstr "元数据详细信息"
+
+#: camp/templates/layers/layer_detail.html:324
+#: camp/templates/layers/layer_detail.html:331
+msgid "Edit Layer"
+msgstr "编辑图层"
+
+#: camp/templates/layers/layer_detail.html:338
+#: camp/templates/maps/map_detail.html:133
+msgid "Metadata"
+msgstr "元数据"
+
+#: camp/templates/layers/layer_detail.html:339
+#: camp/templates/maps/map_detail.html:134
+msgid "Wizard"
+msgstr "向导"
+
+#: camp/templates/layers/layer_detail.html:340
+#: camp/templates/maps/map_detail.html:135
+msgid "Advanced Edit"
+msgstr "高级编辑"
+
+#: camp/templates/layers/layer_detail.html:341
+msgid "Upload Metadata"
+msgstr "上传元数据"
+
+#: camp/templates/layers/layer_detail.html:348
+#: camp/templates/maps/map_detail.html:141
+msgid "Thumbnail"
+msgstr "缩略图"
+
+#: camp/templates/layers/layer_detail.html:349
+#: camp/templates/maps/map_detail.html:142
+msgid "Set"
+msgstr "设置"
+
+#: camp/templates/layers/layer_detail.html:355
+msgid "Layer"
+msgstr "图层"
+
+#: camp/templates/layers/layer_detail.html:357
+msgid "Replace"
+msgstr "替换"
+
+#: camp/templates/layers/layer_detail.html:360
+msgid "Edit data"
+msgstr "编辑数据"
+
+#: camp/templates/layers/layer_detail.html:363
+#: camp/templates/maps/map_detail.html:150
+msgid "Remove"
+msgstr "移除"
+
+#: camp/templates/layers/layer_detail.html:378
+#: camp/templates/layers/layer_detail.html:386
+msgid "Download Metadata"
+msgstr "下载元数据"
+
+#: camp/templates/layers/layer_detail.html:424
+msgid "Legend"
+msgstr "比例尺"
+
+#: camp/templates/layers/layer_detail.html:438
+msgid "Maps using this layer"
+msgstr "使用该图层的地图"
+
+#: camp/templates/layers/layer_detail.html:440
+msgid "List of maps using this layer:"
+msgstr "使用该图层的地图列表："
+
+#: camp/templates/layers/layer_detail.html:446
+msgid "This layer is not currently used in any maps."
+msgstr "该图层现在未被任何地图使用。"
+
+#: camp/templates/layers/layer_detail.html:451
+msgid "Create a map using this layer"
+msgstr "创建使用该图层的地图"
+
+#: camp/templates/layers/layer_detail.html:452
+msgid "Click the button below to generate a new map based on this layer."
+msgstr "点击下方按钮生成一个基于该图层的新地图。"
+
+#: camp/templates/layers/layer_detail.html:457
+msgid "Add the layer to an existing map"
+msgstr "给已存在的地图添加图层"
+
+#: camp/templates/layers/layer_detail.html:465
+msgid "Click the button below to add the layer to the selected map."
+msgstr "点击下方按钮添加图层到选中地图。"
+
+#: camp/templates/layers/layer_detail.html:467
+msgid "Add to Map"
+msgstr "添加到地图"
+
+#: camp/templates/layers/layer_detail.html:474
+msgid "Documents related to this layer"
+msgstr "关于该图层的文档"
+
+#: camp/templates/layers/layer_detail.html:475
+msgid "List of documents related to this layer:"
+msgstr "关于该图层的文档列表："
+
+#: camp/templates/layers/layer_detail.html:488
+msgid "Styles"
+msgstr "样式"
+
+#: camp/templates/layers/layer_detail.html:489
+msgid ""
+"The following styles are associated with this layer. Choose a style to view "
+"it in the preview map."
+msgstr ""
+"下列样式与该图层有关。选择一种样式在预览地图中浏览。"
+#: camp/templates/layers/layer_detail.html:502
+msgid "No styles associated with this layer"
+msgstr "没有该图层相关的样式"
+
+#: camp/templates/layers/layer_detail.html:505
+msgid "(default style)"
+msgstr "(默认样式)"
+
+#: camp/templates/layers/layer_detail.html:512
+msgid "Click the button below to change the permissions of this layer."
+msgstr "点击下方按钮改变该图层的许可"
+
+#: camp/templates/layers/layer_detail.html:513
+msgid "Change Layer Permissions"
+msgstr "改变图层许可"
+
+#: camp/templates/layers/layer_detail.html:522
+#: camp/templates/maps/map_detail.html:232
+msgid "Certifications"
+msgstr "认证"
+
+#: camp/templates/layers/layer_detail.html:529
+msgid "This layer has not been certified by any users."
+msgstr "该图层还未被任何用户认证"
+
+#: camp/templates/layers/layer_detail.html:537
+msgid "Uncertify this layer."
+msgstr "该图层未认证"
+
+#: camp/templates/layers/layer_detail.html:541
+msgid "Certify this layer."
+msgstr "认证该图层"
+
+#: camp/templates/layers/layer_detail.html:551
+msgid "External service layer"
+msgstr "该图层的外部服务"
+
+#: camp/templates/layers/layer_detail.html:552
+msgid "Source"
+msgstr "来源"
+
+#: camp/templates/layers/layer_detail.html:553
+msgid "Type"
+msgstr "类型"
+
+#: camp/templates/layers/layer_list.html:6
+#: camp/templates/layers/layer_list.html:13
+msgid "Explore Layers"
+msgstr "浏览图层"
+
+#: camp/templates/layers/layer_list.html:12
+#: camp/templates/upload/layer_upload.html:17
+msgid "Upload Layers"
+msgstr "上传图层"
+
+#: camp/templates/layers/layer_metadata_advanced.html:16
+msgid "Edit Metadata"
+msgstr "编辑元数据"
+
+#: camp/templates/layers/layer_metadata_advanced.html:21
+#, python-format
+msgid ""
+"\n"
+"        Editing details for %(layer_title)s\n"
+"      "
+msgstr ""
+"\n"
+"        为%(layer_title)s编辑详细信息\n"
+"      "
+
+#: camp/templates/layers/layer_metadata_advanced.html:27
+msgid ""
+"Note: this layer's orginal metadata was populated and preserved by importing "
+"a metadata XML file.\n"
+"          This metadata cannot be edited."
+msgstr ""
+"注意：该图层的原始元数据通过导入一个元数据XML文件来保存的。\n"
+"          该元数据不可被编辑。"
+
+#: camp/templates/layers/layer_metadata_advanced.html:30
+msgid ""
+"Note: this layer's orginal metadata was populated by importing a metadata "
+"XML file.\n"
+"          GeoNode's metadata import supports a subset of ISO, FGDC, and "
+"Dublin Core metadata elements.\n"
+"          Some of your original metadata may have been lost."
+msgstr ""
+"注：此图的原单的元数据被填充通过导入元数据的XML文件。"
+"          GeoNode的元数据导入支持ISO，FGDC和都柏林核心元数据元素的一个子集。"
+"          一些您原来的元数据可能已经丢失。"
+
+#: camp/templates/layers/layer_metadata_advanced.html:36
+msgid "Error updating metadata.  Please check the following fields: "
+msgstr "更新元数据时发生错误。请检查下列区域："
+
+#: camp/templates/layers/layer_metadata_advanced.html:39
+msgid "Metadata Author"
+msgstr "元数据作者"
+
+#: camp/templates/layers/layer_metadata_advanced.html:43
+#: camp/templates/layers/layer_metadata_advanced.html:122
+msgid "Point of Contact"
+msgstr "联系点"
+
+#: camp/templates/layers/layer_metadata_advanced.html:52
+#: camp/templates/layers/layer_metadata_advanced.html:100
+msgid "Attributes"
+msgstr "属性"
+
+#: camp/templates/layers/layer_metadata_advanced.html:67
+#: camp/templates/layers/layer_metadata_advanced.html:134
+msgid "Update"
+msgstr "更新"
+
+#: camp/templates/layers/layer_metadata_advanced.html:77
+msgid "Category"
+msgstr "分类"
+
+#: camp/templates/layers/layer_metadata_advanced.html:104
+msgid "Attribute"
+msgstr "属性"
+
+#: camp/templates/layers/layer_metadata_advanced.html:107
+msgid "Display Order"
+msgstr "显示顺序"
+
+#: camp/templates/layers/layer_metadata_advanced.html:127
+msgid "Metadata Provider"
+msgstr "元数据提供者"
+
+#: camp/templates/maps/map_detail.html:70
+msgid "Rate this Map"
+msgstr "给该地图评分"
+
+#: camp/templates/maps/map_detail.html:88
+#: camp/templates/maps/map_detail.html:103
+msgid "Download Map"
+msgstr "下载地图"
+
+#: camp/templates/maps/map_detail.html:107
+msgid "Download Data Layers"
+msgstr "下载数据图层"
+
+#: camp/templates/maps/map_detail.html:108
+msgid "Download Web Map Context"
+msgstr "下载网络地图环境"
+
+#: camp/templates/maps/map_detail.html:119
+#: camp/templates/maps/map_detail.html:126
+msgid "Edit Map"
+msgstr "编辑地图"
+
+#: camp/templates/maps/map_detail.html:148
+#: camp/templates/maps/map_view.html:6
+msgid "Map"
+msgstr "地图"
+
+#: camp/templates/maps/map_detail.html:149
+msgid "Edit"
+msgstr "编辑"
+
+#: camp/templates/maps/map_detail.html:173
+msgid "Map Layers"
+msgstr "地图图层"
+
+#: camp/templates/maps/map_detail.html:174
+msgid "This map uses the following layers:"
+msgstr "该地图使用了下列图层："
+
+#: camp/templates/maps/map_detail.html:190
+msgid "Documents related to this map"
+msgstr "该地图有关的文档"
+
+#: camp/templates/maps/map_detail.html:191
+msgid "List of documents related to this map:"
+msgstr "该地图有关的文档表"
+
+#: camp/templates/maps/map_detail.html:203
+msgid "Specify which users can view or modify this map"
+msgstr "指定哪个用户可以查看或者修改该地图"
+
+#: camp/templates/maps/map_detail.html:204
+msgid "Change Permissions of this Map"
+msgstr "更改该地图的许可"
+
+#: camp/templates/maps/map_detail.html:210
+msgid "Copy this map"
+msgstr "复制该地图"
+
+#: camp/templates/maps/map_detail.html:211
+msgid "Duplicate this map and modify it for your own purposes"
+msgstr "复制该地图，按照您的意愿修改它"
+
+#: camp/templates/maps/map_detail.html:212
+#: camp/templates/maps/map_list.html:16
+msgid "Create a New Map"
+msgstr "创建新地图"
+
+#: camp/templates/maps/map_detail.html:217
+msgid "Map WMS"
+msgstr "地图WMS"
+
+#: camp/templates/maps/map_detail.html:219
+msgid "WMS layer group for local map layers"
+msgstr "给本地地图图层的WMS图层组"
+
+#: camp/templates/maps/map_detail.html:220
+msgid "on"
+msgstr "在"
+
+#: camp/templates/maps/map_detail.html:220
+msgid "local OWS"
+msgstr "本地OWS"
+
+#: camp/templates/maps/map_detail.html:223
+msgid "Publish local map layers as WMS layer group"
+msgstr "以WMS图层组形式发布本地地图图层"
+
+#: camp/templates/maps/map_detail.html:224
+msgid "Publish Map WMS"
+msgstr "发布地图WMS"
+
+#: camp/templates/maps/map_detail.html:239
+msgid "This map has not been certified by any users"
+msgstr "该地图还未被任何用户认证"
+
+#: camp/templates/maps/map_detail.html:247
+msgid "Uncertify this map"
+msgstr "该地图未认证"
+
+#: camp/templates/maps/map_detail.html:251
+msgid "Certify this map"
+msgstr "认证该地图"
+
+#: camp/templates/maps/map_list.html:13
+msgid "Search for maps"
+msgstr "搜索地图"
+
+#: camp/templates/maps/map_list.html:22
+msgid "Search by text"
+msgstr "通过文本搜索"
+
+#: camp/templates/maps/map_new.html:6
+msgid "New Map"
+msgstr "新地图"
+
+#: camp/templates/people/profile_detail.html:12
+msgid "Profile of "
+msgstr "简介-"
+
+#: camp/templates/people/profile_detail.html:77
+#: camp/templates/people/profile_detail.html:83
+#: camp/templates/people/profile_detail.html:87
+#: camp/templates/people/profile_detail.html:92
+#: camp/templates/people/profile_detail.html:104
+#: camp/templates/people/profile_detail.html:108
+msgid "Not provided."
+msgstr "未提供信息。"
+
+#: camp/templates/people/profile_detail.html:82
+msgid "Position"
+msgstr "职位"
+
+#: camp/templates/people/profile_detail.html:86
+msgid "Organization"
+msgstr "组织"
+
+#: camp/templates/people/profile_detail.html:91
+msgid "Location"
+msgstr "位置"
+
+#: camp/templates/people/profile_detail.html:95
+msgid "Voice"
+msgstr "联系电话"
+
+#: camp/templates/people/profile_detail.html:103
+msgid "Fax"
+msgstr "传真"
+
+#: camp/templates/people/profile_detail.html:112
+msgid "Keywords"
+msgstr "关键词"
+
+#: camp/templates/people/profile_detail.html:119
+msgid "Not provided"
+msgstr "未提供信息"
+
+#: camp/templates/people/profile_detail.html:129
+msgid "Message User"
+msgstr "编辑短信"
+
+#: camp/templates/people/profile_detail.html:133
+#: camp/templates/people/profile_detail.html:167
+msgid "Edit profile"
+msgstr "编辑个人简介"
+
+#: camp/templates/people/profile_detail.html:134
+msgid "Change password"
+msgstr "更改密码"
+
+#: camp/templates/people/profile_detail.html:137
+msgid "Upload new layers"
+msgstr "上传新图层"
+
+#: camp/templates/people/profile_detail.html:139
+msgid "Create a new layer"
+msgstr "创建新图层"
+
+#: camp/templates/people/profile_detail.html:141
+msgid "Create a new map"
+msgstr "创建新地图"
+
+#: camp/templates/people/profile_detail.html:142
+msgid "My Activities"
+msgstr "我的活动"
+
+#: camp/templates/people/profile_detail.html:146
+msgid "Notifications"
+msgstr "通知"
+
+#: camp/templates/people/profile_detail.html:149
+msgid "Announcements"
+msgstr "公告"
+
+#: camp/templates/people/profile_detail.html:154
+msgid "Remote Services"
+msgstr "外部服务"
+
+#: camp/templates/people/profile_detail.html:155
+msgid "GeoServer"
+msgstr "GeoServer"
+
+#: camp/templates/base.html:73
+#: camp/templates/people/profile_detail.html:158
+msgid "Admin"
+msgstr "管理员"
+
+#: camp/templates/people/profile_detail.html:171
+msgid "User Activities"
+msgstr "用户活动"
+
+#: camp/templates/people/profile_detail.html:184
+msgid "Resources"
+msgstr "资源"
+
+#: camp/templates/people/profile_detail.html:200
+msgid "Certified Resources"
+msgstr "认证资源"
+
+#: camp/templates/site_index.html:56
+msgid "My Layers"
+msgstr "我的图层"
+
+#: camp/templates/site_index.html:57
+#: camp/templates/upload/layer_upload.html:5
+msgid "Upload Layer"
+msgstr "上传图层"
+
+#: camp/templates/site_index.html:59
+msgid "About"
+msgstr "关于"
+
+#: camp/templates/site_index.html:68
+msgid ""
+"Build your own mapping portal and publish it to the world or to just a few "
+"collaborators. WorldMap is open source software."
+msgstr ""
+"搭建您自己的制图门户网站，发布给世界或者一些合作者。WorldMap是一个开源软件。"
+
+#: camp/templates/site_index.html:70
+msgid "WorldMap is being developed by the "
+msgstr "开发WorldMap的是"
+
+#: camp/templates/site_index.html:70
+msgid "Center for Geographic Analysis at Zhejiang University"
+msgstr "哈佛大学地理分析中心"
+
+#: camp/templates/site_index.html:70
+msgid "Bigdata and AMAP Innovation Team of Zhejiang University"
+msgstr "浙江大学大数据与学术地图创新团队"
+
+#: camp/templates/site_index.html:70
+msgid "at"
+msgstr "在"
+
+#: camp/templates/upload/layer_upload.html:39
+msgid "Incomplete Uploads"
+msgstr "不完整的上传"
+
+#: camp/templates/upload/layer_upload.html:40
+msgid "You have the following incomplete uploads"
+msgstr "您有下列不完整的上传文件"
+
+#: camp/templates/upload/layer_upload.html:43
+msgid "last updated on"
+msgstr "上一次更新在"
+
+#: camp/templates/upload/layer_upload.html:45
+msgid "Resume"
+msgstr "重新开始"
+
+#: camp/templates/upload/layer_upload.html:46
+#: camp/templates/upload/layer_upload.html:53
+msgid "Delete"
+msgstr "删除"
+
+#: camp/templates/upload/layer_upload.html:52
+msgid "Are you sure you want to delete this upload?"
+msgstr "您确定您想要删除这次上传？"
+
+#: camp/templates/upload/layer_upload.html:54
+msgid "Cancel"
+msgstr "取消"
+
+#: camp/templates/upload/layer_upload.html:55
+msgid "Delete, and don't ask me again."
+msgstr "删除，并不再提醒。"
+
+#: camp/templates/upload/layer_upload.html:72
+msgid "Drop files here"
+msgstr "把文件拖至此处"
+
+#: camp/templates/upload/layer_upload.html:75
+msgid " or select them one by one:"
+msgstr "或者逐一选中它们："
+
+#: camp/templates/upload/layer_upload.html:80
+msgid "Choose Files"
+msgstr "选择文件"
+
+#: camp/templates/upload/layer_upload.html:85
+msgid "Files to be uploaded"
+msgstr "将被上传的文件"
+
+#: camp/templates/upload/layer_upload.html:93
+msgid "Select the charset or leave default"
+msgstr "选中字符集或者保持默认"
+
+#: camp/templates/upload/layer_upload.html:111
+msgid "Clear"
+msgstr "清空"
+
+#: camp/templates/upload/layer_upload.html:112
+msgid "Upload files"
+msgstr "上传文件"
+
+#: camp/templates/worldmap_client/worldmap.html:53
+msgid "Identify"
+msgstr "识别"
+
+#: camp/templates/worldmap_client/worldmap.html:62
+msgid "Map Coordinates - longitude, latitude"
+msgstr "地图坐标-经度，纬度"
+
+#: camp/templates/worldmap_client/worldmap.html:69
+msgid "Print"
+msgstr "打印"
+
+#: camp/templates/worldmap_client/worldmap.html:81
+msgid "Google Earth"
+msgstr "谷歌地球"
+
+#: camp/templates/worldmap_client/worldmap.html:93
+msgid "Measure"
+msgstr "测量"
+
+#: camp/templates/worldmap_client/worldmap.html:100
+msgid "Share Map"
+msgstr "分享地图"
+
+#: camp/templates/worldmap_client/worldmap.html:107
+msgid "Find Place"
+msgstr "找到地点"
+
+#: camp/templates/worldmap_client/worldmap.html:134
+msgid "Create Feature"
+msgstr "创建要素"
+
+#: camp/templates/worldmap_client/worldmap.html:135
+msgid "Edit Feature"
+msgstr "编辑要素"
+
+#: camp/templates/worldmap_client/worldmap.html:220
+msgid "Upload a Layer"
+msgstr "上传图层"
+
+#: camp/templates/worldmap_client/worldmap.html:222
+msgid "Click here to upload a layer."
+msgstr "点击这里上传图层"
+
+#: camp/templates/worldmap_client/worldmap.html:223
+#: camp/templates/worldmap_client/worldmap.html:235
+msgid "Remember to save the map before."
+msgstr "记得先进行地图保存"
+
+#: camp/templates/worldmap_client/worldmap.html:232
+msgid "Create a new Layer"
+msgstr "创建新图层"
+
+#: camp/templates/worldmap_client/worldmap.html:234
+msgid "Click here to create a new layer."
+msgstr "点击这里创建新图层。"
+
+#: camp/templates/worldmap_client/worldmap.html:247
+msgid "Rectify Images"
+msgstr "校正影像"
+
+#: camp/templates/worldmap_client/worldmap.html:248
+msgid ""
+"Use <a target='_blank' href='https://mapwarper.net/'>Map "
+"Warper</a> to upload and rectify scanned maps for use in WorldMap."
+msgstr ""
+"使用 <a target='_blank' href='https://mapwarper.net/'>Map "
+"Warper</a> 上传并校正扫描地图，以便于在WorldMap中使用。"
+
+#: camp/templates/worldmap_client/worldmap.html:248
+msgid ""
+"Maps rectified using this tool can be brought into WorldMap by following the instructions under Section 4.7 in <a href='%(STATIC_URL)sdocs/Camp_Help_en.pdf'>Camp Help</a>."
+msgstr ""
+"使用该工具进行校正的地图可以导入WorldMap中，具体流程请查看 <a href='%(STATIC_URL)sdocs/Camp_Help_en.pdf'>WorldMap帮助文档</a>中的4.7章节。"
+
+#: camp/templates/worldmap_client/worldmap.html:261
+#: camp/templates/worldmap_client/worldmap.html:277
+msgid "Submit a Map Service URL"
+msgstr "提交地图服务地址"
+
+#: camp/templates/worldmap_client/worldmap.html:264
+#: camp/templates/worldmap_client/worldmap.html:280
+msgid ""
+"<a target='_blank' href='/maps/add_endpoint'>Submit a Map Service URL</a>"
+msgstr ""
+"<a target='_blank' href='/maps/add_endpoint'>提交地图服务地址</a>"
+
+#: camp/templates/site_index.html:hottest
+msgid "Hottest Maps"
+msgstr "最热地图"
+
+#: camp/templates/site_index.html:latest
+msgid "Latest Maps"
+msgstr "最新地图"
+
+#: camp/templates/site_index.html:categories
+msgid "All the categories"
+msgstr "所有学科"
+msgid "Geoscientific Information"
+msgstr "地学信息"
+msgid "Farming"
+msgstr "农学"
+#msgid "Elevation"
+#msgstr "高程"
+msgid "Utilities Communication"
+msgstr "公用通信"
+msgid "Oceans"
+msgstr "海洋"
+msgid "Boundaries"
+msgstr "边界"
+msgid "Inland Waters"
+msgstr "内陆水域"
+msgid "Intelligence Military"
+msgstr "军事情报"
+msgid "Environment"
+msgstr "环境"
+#msgid "Location"
+#msgstr "位置"
+msgid "Economy"
+msgstr "经济"
+msgid "Planning Cadastre"
+msgstr "规划地籍"
+msgid "Biota"
+msgstr "生物群"
+msgid "Health"
+msgstr "健康"
+msgid "Imagery Base Maps Earth Cover"
+msgstr "植被影像基础地图"
+msgid "Transportation"
+msgstr "交通"
+msgid "Society"
+msgstr "社会科学"
+msgid "Structure"
+msgstr "建筑物"
+msgid "Climatology Meteorology Atmosphere"
+msgstr "气候气象"
+msgid "Humanity History"
+msgstr "人文历史"
+
+#: camp/templates/base.html:155
+msgid "Don't have an account yet?"
+msgstr "未创建账户？"
+#: camp/templates/base.html:61
+msgid "Academic Map Publishing Platform"
+msgstr "学术地图发布平台"
+
+#: camp/templates/base.html:133
+msgid "K&SS ZJU"
+msgstr "浙江大学社会科学研究院"
+msgid "CGA Harvard"
+msgstr "哈佛大学CGA"
+msgid "Copyright Notice"
+msgstr "版权声明"
+msgid "All rights reserved"
+msgstr "版权所有"
+msgid "Disclaimer"
+msgstr "免责声明"
+msgid "Choose Language"
+msgstr "语言选择"
+
+#: camp/templates/site_index.html:88
+msgid "About Us"
+msgstr "关于我们"
+msgid "About GeoNode"
+msgstr "关于GeoNode"
+
+#: camp/templates/aboutus.html:23
+msgid "Disclaimer and Terms of Use"
+msgstr "免责声明"
+
+#: camp/templates/aboutus.html:23
+msgid "A large amount of geographical information which is closely related to human activities exists in the brilliant human civilization, numerous documents since ancient times, as well as the vast land and ocean. For example, the geographical distribution of individuals, the traces and the social relations for a single person, the migration of a group, as well as the existence, distribution and change of a region and trajectory for non-living things; as for a place, it also contains the people, events, things and other geographical information in previous time."
+msgstr "灿烂辉煌的人类文明、浩如烟海的古今文献以及广袤无垠的陆地海洋，存在着海量的与人类活动息息相关的地理信息。就单个人物来说，包括人物的籍贯、行迹、社会关系的地理分布；就群体来说，包括一个群体的地理分布和迁徙轨迹；就非生命的物体来说，也有其存在、分布和变化的地理区域；就一个地方来说，则又包含了既往时间里人、事、物等地理信息的总汇。"
+
+ #: camp/templates/aboutus.html:23
+msgid "The Academic Map Publishing Platform, established by the Academy of Social Sciences of Zhejiang University (executed by the big data and Academic map innovation team of Zhejiang University) and the Center for Geographic Analysis of Harvard University together, is not only an integrated database providing multi-functional query services, but also a display platform ready for users to present their research productions about geographic information and visualize analysis and select. The big data formed by the platform, will greatly contribute to future scientific research, government decision-making and social services."
+msgstr "由浙江大学社会科学研究院（具体由“浙江大学大数据+学术地图创新团队”执行）与哈佛大学地理分析中心共建的学术地图发布平台愿为广大用户提供地理信息研究成果的发布、可视化分析及多功能查询服务，平台所形成的大数据，可以为未来科学研究、政府决策及社会服务提供重要的参考。 "
+
+#: camp/templates/aboutus.html:23
+msgid "The big data and Academic map innovation team of Zhejiang University"
+msgstr "浙江大学大数据+学术地图创新团队"
+
+#: camp/templates/aboutus.html:23
+msgid "The Center for Geographic Analysis of Harvard University"
+msgstr "哈佛大学地理分析中心"
+
+#: camp/templates/aboutus.html:23
+msgid "Mar 13, 2018"
+msgstr "2018年3月13日"
+
+#: camp/templates/aboutus.html:23
+msgid "The copyright of the Academic Map Publishing Platform belongs to both the big data and Academic map innovation team of Zhejiang University and the Center for Geographic Analysis of Harvard University. To download or print a map made with \"Tianditu\" as the basemap, it must be marked as \"Transferred from the Academic Map Publishing Platform (amap.zju.edu.cn), and the basemap is Tianditu (www.tianditu.com)\"."
+msgstr "“学术地图发布平台”的版权归“浙江大学大数据+学术地图创新团队”和“哈佛大学地理分析中心”共同所有。下载、打印以“天地图”为底图制作的底图，须注明“转自学术地图发布平台（amap.zju.edu.cn），底图为天地图（www.tianditu.com）”字样。"
+
+#: camp/templates/aboutus.html:23
+msgid "You agree that you are responsible for your own use of this Site and for any  data, information and other content (including texts, pictures, audio and video files) you upload, submit or distribute to or through the Site (collectively, “User Postings”). Your use of the Site and your User Postings must comply with local and national laws, regulations and academic norms, including copyright laws and laws regarding the transmission of technical data exported from your country of residence. You are solely responsible for any legal liability arising from your use of this Site and your User Postings. This Site, and the developers and administrators of the Academic Map Publishing Platform and their respective employees (collectively, the “Platform Providers”), shall have no legal liability arising from your use of the Site or your User Postings. In particular, to the fullest extent permitted by law, you agree that neither the Site nor the Platform Providers will be liable to you for any loss or damages, either actual or consequential, arising out of or relating to your or any other party’s use of or inability to use the Site, your or any other party’s User Postings, or your or any other party’s reliance on any information obtained from or through the Site, regardless of the nature of the claim."
+msgstr "发布者发布的数据和信息（包括文字、图片、影音文件），必须符合国家的法律法规和学术规范，若因发布的内容而引起的法律责任，由发布者自负。"
+
+#: camp/templates/aboutus.html:23
+msgid "You are responsible to back up your own files and content. This Site does not assume responsibility for data loss due to hacker attacks, viruses or any other reasons."
+msgstr "发布者发布的数据和信息，务必自己备份，本网站不承担因黑客攻击或病毒侵入造成的发布者数据损失的责任。"
+
+#: camp/templates/aboutus.html:23
+msgid "This Site and any information, content or services made available on or through the Site are provided “as is” and “as available” without warranty of any kind (express, implied or otherwise), including without limitation, any implied warranties of merchantability, fitness for a particular purpose and non-infringement. The Site and the Platform Providers do not warrant that the Site will operated in an uninterrupted or error-free manner, that the Site is free of viruses or other harmful components, or that the content and information provided will meet your needs or expectations.  The Site and the Platform Providers also make no warranty about the accuracy, completeness, timeliness, or quality of the Site, any User Postings or any other content, or that any particular content will continue to be made available."
+msgstr "本网站及其雇员一概毋须以任何方式就任何信息传递或传送的失误、不准确或错误对用户或任何其他人士负任何直接或间接的责任。"
+
+#: camp/templates/aboutus.html:23
+msgid "The following list of items is strictly prohibited in your User Postings: content that defames, harasses or threatens others; content that infringes another’s intellectual property, including but not limited to, copyrights or trademarks; profane, obscene, indecent or unlawful content; advertising or any form of commercial solicitation; and viruses, Trojan horses, worms, time bombs, corrupted files, malware, spyware or any other similar software that may damage the operation of another’s computer or property."
+msgstr "本网站所提供的信息，若在任何司法管辖地区供任何人士使用或分发给任何人士时会违反该司法管辖地区的法律或条例的规定或会导致本网站或其第三方代理人受限于该司法管辖地区内的任何监管规定时，则该等信息不宜在该司法管辖地区供该等任何人士使用或分发给该等任何人士。用户须自行保证不会受限于任何限制或禁止用户使用或分发本网站所提供信息的当地的规定。"
+
+#: camp/templates/aboutus.html:23
+msgid "You agree to make sure that your User Postings will not be subject to any local restrictions that restrict or prohibit other users of this Site from using or distributing such content or information. You agree not to scrape, or otherwise download in bulk, any Site content, User Postings or user information."
+msgstr "本网站图片，文字之类版权申明，因为网站可以由注册用户自行上传图片或文字，本网站无法鉴别所上传图片或文字的知识版权，如果侵犯，请及时通知我们，本网站将在第一时间及时删除。"
+
+#: camp/templates/aboutus.html:23
+msgid "Because this Site is open to any registered user to upload User Postings, we cannot be responsible for the accuracy, usefulness, reliability or intellectual property rights of or relating to such User Posting. Neither the Site nor the Platform Providers have any obligation to monitor any User Postings or other information available on or through the Site. However, the Site reserves the right to review User Postings and to exercise its sole discretion to edit or remove, in whole or in part, any User Posting at any time. Copyright owners who believe their material has been infringed on the Site should contact the Social Sciences Academy of Zhejiang University and provide all requested information."
+msgstr "任何由于黑客攻击、计算机病毒侵入或发作、因政府管制而造成的暂时性关闭等影响网络正常经营的不可抗力而造成的损失，本网站均得免责（不可抗力因素不需要网站负责）。因和本网站链接的其它网站所造成的个人资料泄露及由此而导致的任何法律争议和后果，本网站均得免责。"
+
+#: camp/templates/aboutus.html:23
+msgid "We accept no liability for any loss or damage arising from reasons beyond our control that influences the normal operation of this website, such as hacker attacks, computer virus invasion or attack, the temporary closure caused by government regulation and so on. The Site and the Platform Providers are not responsible for, and do not routinely screen, approve, review or endorse the contents of or use of any of the products or services that may be offered at other websites linked to this Site. You access such linked websites at your own risk. If such linked websites cause the disclosure of personal information  or otherwise cause loss or damage, this Site does not undertake responsibility for this situation."
+msgstr "凡以任何方式登陆本网站或直接、间接使用本网站资料者，视为自愿接受本网站声明的约束。"
+
+#: camp/templates/aboutus.html:23
+msgid "By accessing this Site or using this Site in any way, you accept the constraints and requirements of this disclaimer voluntarily."
+msgstr " "
+
+#: camp/templates/site_index.html:video tutorials
+msgid "Video Tutorials"
+msgstr "视频教程"
+msgid "Create Map by Existed Layer"
+msgstr "通过已有图层来创建地图"
+msgid "Create Map by Adding Layers"
+msgstr "通过添加地图来创建地图"
+
+#: camp/local_settings.py: SOCIAL_ORIGINS
+msgid "WeChat Moments"
+msgstr "微信"
+msgid "QQ"
+msgstr ""
+msgid "Qzone"
+msgstr "QQ空间"
+msgid "Tencent Microblog"
+msgstr "腾讯微博"
+msgid "Sina Microblog"
+msgstr "新浪微博"
+msgid "Renren Inc"
+msgstr "人人网"
+msgid "Baidu Post Bar"
+msgstr "百度贴吧"
+msgid "Douban"
+msgstr "豆瓣"
+
+#: camp/local_settings.py: WM_COPYRIGHT_TEXT
+msgid "Bigdata and AMAP Innovation Team"
+msgstr "大数据与学术地图创新团队"
+
+#: camp/settings.py: DEFAULT_MAP_ABSTRACT
+msgid "<h4>About Us</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A large amount of geographical information which is closely related to human activities exists in the brilliant human civilization, numerous documents since ancient times, as well as the vast land and ocean. For example, the geographical distribution of individuals, the traces and the social relations for a single person, the migration of a group, as well as the existence, distribution and change of a region and trajectory for non-living things; as for a place, it also contains the people, events, things and other geographical information in previous time.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Academic Map Publishing Platform, established by Zhejiang University and Harvard University together, is not only an integrated database providing multi-functional query services, but also a display platform ready for users to present their research productions about geographic information and visualize analysis and select. The big data formed by the platform, will greatly contribute to future scientific research, overnment decision-making and social services.</p>"
+msgstr "<h4>关于我们</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;灿烂辉煌的人类文明、浩如烟海的古今文献以及广袤无垠的陆地海洋，存在着海量的与人类活动息息相关的地理信息。就单个人物来说，包括人物的籍贯、行迹、社会关系的地理分布；就群体来说，包括一个群体的地理分布和迁徙轨迹；就非生命的物体来说，也有其存在、分布和变化的地理区域；就一个地方来说，则又包含了既往时间里人、事、物等地理信息的总汇。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由浙江大学与哈佛大学共建的学术地图发布平台愿为广大用户提供地理信息研究成果的发布、可视化分析及多功能查询服务，平台所形成的大数据，可以为未来科学研究、政府决策及社会服务提供重要的参考。</p>"
