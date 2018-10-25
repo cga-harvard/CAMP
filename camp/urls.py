@@ -24,12 +24,14 @@ from django.views.generic import TemplateView
 from geonode.urls import urlpatterns
 from .views import map_list_hottest
 
-urlpatterns += [
+urlpatterns = [
+    url(r'^/?$',
+        TemplateView.as_view(template_name='site_index.html'),
+        name='home'),
     url(r'^aboutus/$',
   	    TemplateView.as_view(template_name='aboutus.html'),
         name='aboutus'),
     url(r'^maps/list/hottest/$', map_list_hottest, name='map_list_hottest'),
-    url(r'^/?$',
-        TemplateView.as_view(template_name='site_index.html'),
-        name='home'),
-]
+] + urlpatterns
+
+print urlpatterns
