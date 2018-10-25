@@ -419,9 +419,11 @@ LOGGING = {
 SITE_HOST_NAME = os.getenv('SITE_HOST_NAME', "localhost")
 SITE_HOST_PORT = os.getenv('SITE_HOST_PORT', "8000")
 
-#
-# General Django development settings
-#
+# use the WorldMap client
+GEONODE_CLIENT_HOOKSET = "geonode.client.hooksets.WorldMapHookSet"
+CORS_ORIGIN_WHITELIST = (
+    HOSTNAME
+)
 
 #Define email service on GeoNode
 EMAIL_ENABLE = True
