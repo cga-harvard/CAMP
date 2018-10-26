@@ -1,7 +1,13 @@
+import csv
 import json
+import requests
 
+from django.conf import settings
 from django.http import HttpResponse
+from django.shortcuts import render
+
 from geonode.base.models import TopicCategory, ResourceBase
+from geonode.layers.models import Layer
 from geonode.maps.models import Map
 
 # get the major maps created by admin, or get the hotest and latest layer/map
@@ -39,3 +45,61 @@ def map_list_hottest(request):
     resourcebase_json = json.dumps(resourcebase_dict)
     return HttpResponse(resourcebase_json)
 
+
+def selection_list(request):
+    """
+    This view returns a list of items added to the selection from the user in
+    the current session in html or in csv.
+    """
+    if request.session.get('layer_ids'):
+        layer_ids = request.session.get('layer_ids')
+    else:
+        layer_ids = []
+    if request.session.get('map_ids'):
+        map_ids = request.session.get('map_ids')
+    else:
+        map_ids = []
+    layers = None
+    maps = None
+
+    if request.POST:
+        if 'export_layers' in request.POST.dict() or 'export_maps' in request.POST.dict():
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="export.csv"'
+            writer = csv.writer(response)
+            if 'export_layers' in request.POST.dict():
+                resources = Layer.objects.filter(id__in=layer_ids).order_by('-title')
+            if 'export_maps' in request.POST.dict():
+                resources = Map.objects.filter(id__in=map_ids).order_by('-title')
+            for res in resources:
+                res_url = '%s%s' % (settings.SITEURL, res.get_absolute_url()[1:])
+                writer.writerow(
+                                [res.title.encode('utf-8'),
+                                res.abstract.encode('utf-8'),
+                                res_url])
+            return response
+        if 'clear' in request.POST.dict():
+            request.session['layer_ids'] = None
+            request.session['map_ids'] = None
+    else:
+        url = request.META.get('HTTP_REFERER')
+        if url:
+            if '/layers/' in url or '/maps/' in url:
+                url = url.replace(settings.SITEURL, settings.SITEURL + 'api/')
+                req = requests.get(url)
+                object_ids = []
+                for obj in req.json()['objects']:
+                    object_ids.append(obj['id'])
+                if '/layers/' in url:
+                    layer_ids = list(set(layer_ids) | set(object_ids))
+                    request.session['layer_ids'] = layer_ids
+                if '/maps/' in url:
+                    map_ids = list(set(map_ids) | set(object_ids))
+                    request.session['map_ids'] = map_ids
+        layers = Layer.objects.filter(id__in=layer_ids).order_by('-title')
+        maps = Map.objects.filter(id__in=map_ids).order_by('-title')
+    return render(
+        request,
+        "selection/selection_list.html",
+        { "layers": layers, "maps": maps, }
+    )
