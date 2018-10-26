@@ -22,7 +22,7 @@ from django.conf.urls import url, include
 from django.views.generic import TemplateView
 
 from geonode.urls import urlpatterns
-from .views import map_list_hottest
+from .views import map_list_hottest, selection_list
 
 urlpatterns = [
     url(r'^/?$',
@@ -32,6 +32,5 @@ urlpatterns = [
   	    TemplateView.as_view(template_name='aboutus.html'),
         name='aboutus'),
     url(r'^maps/list/hottest/$', map_list_hottest, name='map_list_hottest'),
+    url(r'^selection/list/$', selection_list, name='selection_list'),
 ] + urlpatterns
-
-print urlpatterns
