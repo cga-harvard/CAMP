@@ -20,11 +20,13 @@
 
 from django.conf.urls import url, include
 from django.views.generic import TemplateView
+from django.views.defaults import page_not_found
 
 from geonode.urls import urlpatterns
 from .views import map_list_hottest, selection_list
 
 urlpatterns = [
+    # camp additional urls
     url(r'^/?$',
         TemplateView.as_view(template_name='site_index.html'),
         name='home'),
@@ -33,4 +35,6 @@ urlpatterns = [
         name='aboutus'),
     url(r'^maps/list/hottest/$', map_list_hottest, name='map_list_hottest'),
     url(r'^selection/list/$', selection_list, name='selection_list'),
+    # urls to disable
+    url('^services/', page_not_found, {'exception': Exception('Not Found')}),
 ] + urlpatterns
