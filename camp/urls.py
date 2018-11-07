@@ -22,8 +22,19 @@ from django.conf.urls import url, include
 from django.views.generic import TemplateView
 from django.views.defaults import page_not_found
 
+from tastypie.api import Api
+
 from geonode.urls import urlpatterns
+
+from .api import LayerResource, MapResource, OwnerResource, TopicCategoryResource
 from .views import map_list_hottest, selection_list
+
+camp_api = Api(api_name='camp_api')
+camp_api.register(LayerResource())
+camp_api.register(MapResource())
+camp_api.register(OwnerResource())
+camp_api.register(TopicCategoryResource())
+
 
 urlpatterns = [
     # camp additional urls
@@ -35,6 +46,7 @@ urlpatterns = [
         name='aboutus'),
     url(r'^maps/list/hottest/$', map_list_hottest, name='map_list_hottest'),
     url(r'^selection/list/$', selection_list, name='selection_list'),
+    url(r'^api/', include(camp_api.urls)),
     # urls to disable
     url('^services/', page_not_found, {'exception': Exception('Not Found')}),
 ] + urlpatterns
