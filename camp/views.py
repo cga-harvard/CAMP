@@ -66,7 +66,7 @@ def selection_list(request):
         if 'export_layers' in request.POST.dict() or 'export_maps' in request.POST.dict():
             response = HttpResponse(content_type='text/csv')
             response['Content-Disposition'] = 'attachment; filename="export.csv"'
-            writer = csv.writer(response)
+            writer = csv.writer(response, dialect='excel')
             if 'export_layers' in request.POST.dict():
                 resources = Layer.objects.filter(id__in=layer_ids).order_by('-title')
             if 'export_maps' in request.POST.dict():
@@ -82,22 +82,31 @@ def selection_list(request):
             request.session['layer_ids'] = None
             request.session['map_ids'] = None
     else:
-        url = request.META.get('HTTP_REFERER')
-        if url:
-            if '/layers/' in url or '/maps/' in url:
-                url = url.replace(settings.SITEURL, settings.SITEURL + 'api/')
-                req = requests.get(url)
-                object_ids = []
-                for obj in req.json()['objects']:
-                    object_ids.append(obj['id'])
-                if '/layers/' in url:
-                    layer_ids = list(set(layer_ids) | set(object_ids))
-                    request.session['layer_ids'] = layer_ids
-                if '/maps/' in url:
-                    map_ids = list(set(map_ids) | set(object_ids))
-                    request.session['map_ids'] = map_ids
-        layers = Layer.objects.filter(id__in=layer_ids).order_by('-title')
-        maps = Map.objects.filter(id__in=map_ids).order_by('-title')
+        if 'item' in request.GET:
+            res = ResourceBase.objects.get(id=int(request.GET['item']))
+            if res.alternate:
+                layer_ids.append(res.id)
+            else:
+                map_ids.append(res.id)
+        else:
+            url = request.META.get('HTTP_REFERER')
+            if url:
+                if '/layers/' in url or '/maps/' in url:
+                    url = url.replace(settings.SITEURL, settings.SITEURL + 'api/')
+                    req = requests.get(url)
+                    object_ids = []
+                    for obj in req.json()['objects']:
+                        object_ids.append(obj['id'])
+                    if '/layers/' in url:
+                        layer_ids = list(set(layer_ids) | set(object_ids))
+                    if '/maps/' in url:
+                        map_ids = list(set(map_ids) | set(object_ids))
+
+        request.session['layer_ids'] = layer_ids
+        request.session['map_ids'] = map_ids
+        layers = Layer.objects.filter(id__in=layer_ids).order_by('title')
+        maps = Map.objects.filter(id__in=map_ids).order_by('title')
+
     return render(
         request,
         "selection/selection_list.html",
