@@ -320,20 +320,12 @@ MAP_BASELAYERS = [{
     "fixed": True,
 }]
 
-if 'geonode.geoserver' in INSTALLED_APPS:
-    LOCAL_GEOSERVER = {
-        "source": {
-            "ptype": "gxp_wmscsource",
-            "url": OGC_SERVER['default']['PUBLIC_LOCATION'] + "wms",
-            "restUrl": "/gs/rest"
-        }
-    }
-    baselayers = MAP_BASELAYERS
-    MAP_BASELAYERS = [LOCAL_GEOSERVER]
-    MAP_BASELAYERS.extend(baselayers)
+baselayers = MAP_BASELAYERS
+MAP_BASELAYERS = [LOCAL_GEOSERVER]
+MAP_BASELAYERS.extend(baselayers)
 
 # notification settings
-NOTIFICATION_ENABLED = True
+NOTIFICATION_ENABLED = False
 
 # notifications backends
 _EMAIL_BACKEND = "pinax.notifications.backends.email.EmailBackend"
