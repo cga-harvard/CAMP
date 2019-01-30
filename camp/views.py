@@ -3,11 +3,13 @@ import json
 import requests
 
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render
 
 from geonode.base.models import TopicCategory, ResourceBase
 from geonode.layers.models import Layer
+from geonode.layers.views import layer_upload
 from geonode.maps.models import Map
 
 # get the major maps created by admin, or get the hotest and latest layer/map
@@ -112,3 +114,15 @@ def selection_list(request):
         "selection/selection_list.html",
         { "layers": layers, "maps": maps, }
     )
+
+@login_required
+def layer_upload_wm(request, template='layers/layer_upload_standard.html'):
+    print 'Using geonode.rest uploader'
+    settings.UPLOADER['BACKEND'] = 'geonode.rest'
+    return layer_upload(request, template)
+
+@login_required
+def layer_upload_geojson(request, template='layers/layer_upload_geojson.html'):
+    print 'Using geonode.importer uploader'
+    settings.UPLOADER['BACKEND'] = 'geonode.importer'
+    return layer_upload(request, template)

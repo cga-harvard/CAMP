@@ -27,7 +27,7 @@ from tastypie.api import Api
 from geonode.urls import urlpatterns
 
 from .api import LayerResource, MapResource, OwnerResource, TopicCategoryResource
-from .views import map_list_hottest, selection_list
+from .views import map_list_hottest, selection_list, layer_upload_geojson, layer_upload_wm
 
 camp_api = Api(api_name='camp_api')
 camp_api.register(LayerResource())
@@ -46,6 +46,10 @@ urlpatterns = [
         name='aboutus'),
     url(r'^maps/list/hottest/$', map_list_hottest, name='map_list_hottest'),
     url(r'^selection/list/$', selection_list, name='selection_list'),
+    # geojson upload (temp)
+    url(r'^layers/upload$', layer_upload_wm, name='layer_upload_wm'),
+    url(r'^layers/upload_geojson$', layer_upload_geojson, name='layer_upload_geojson'),
+    # api
     url(r'^api/', include(camp_api.urls)),
     # urls to disable
     url('^services/', page_not_found, {'exception': Exception('Not Found')}),
