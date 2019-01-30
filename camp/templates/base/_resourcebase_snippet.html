@@ -56,7 +56,7 @@
                   title="Add URL"><i class="fa fa-list"></i>
                 </a>
               </div>
-              
+
           </div>
           <em ng-if="item.online && item.store_type == 'remoteStore'">
             {% endverbatim %}
@@ -83,7 +83,7 @@
                   <i class="fa fa-map-marker"></i>{% trans "Create a Map" %}</a>
                   {% verbatim %}
                 </li>
-                <li><a ng-if="item.detail_url.indexOf('/maps/') > -1" href="{{ item.site_url }}maps/{{item.id}}/view">
+                <li><a ng-if="item.detail_url.indexOf('/maps/') > -1" href="/maps/{{item.id}}/view">
                   {% endverbatim %}
                   <i class="fa fa-map-marker"></i>{% trans "View Map" %}</a>
                   {% verbatim %}
