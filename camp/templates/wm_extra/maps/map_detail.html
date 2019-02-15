@@ -274,7 +274,7 @@
 {% block extra_script %}
 {{ block.super }}
     {% if DISPLAY_SOCIAL %}
-        {% include 'facebook_sdk.html' %}
+     <!-- {\% include 'facebook_sdk.html' \%} -->
     {% endif %}
     {% if request.user.is_authenticated %}
           {% user_rating_js request.user resource "map" %}
@@ -308,12 +308,9 @@
       // TODO: this should really not be inside a script tag...
       var $wmsBtn = $("#layer-group"),
           layerGroupElTpl;
-
       if ($wmsBtn.length > 0) {
-
         $wmsBtn.on("click", function(event) {
           event.preventDefault();
-
           $.ajax({
             type: "PUT",
             url: $wmsBtn.attr("href")
@@ -333,17 +330,16 @@
             .always(function(){
               $("#layer-group-dl").html(layerGroupElTpl);
             });
-
         });
       };
       {% endverbatim %}
      });
     {% if DISPLAY_SOCIAL %}
-     (function() {
-       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-       po.src = 'https://apis.google.com/js/plusone.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-     })();
+     // (function() {
+     //   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+     //   po.src = 'https://apis.google.com/js/plusone.js';
+     //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     // })();
     {% endif %}
       $("#comment_submit_btn").click(function(event) {
         $.ajax({
@@ -354,7 +350,7 @@
             $('#form_post_comment_div').modal().find('form')[0].reset();
             $('#form_post_comment_div').modal('hide');
             $('#comments_section').load(window.location.pathname + ' #comments_section',
-            		function(){$(this).children().unwrap()})
+                function(){$(this).children().unwrap()})
           }
         });
         return false;
