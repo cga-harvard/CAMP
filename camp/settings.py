@@ -402,62 +402,7 @@ DATABASES = {
     }
 }
 
-GEOSERVER_LOCATION = os.getenv(
-    'GEOSERVER_LOCATION', 'http://localhost:8080/geoserver/'
-)
-
-GEOSERVER_LOCATION = os.getenv(
-    'GEOSERVER_LOCATION', 'http://localhost:8080/geoserver/'
-)
-
-GEOSERVER_PUBLIC_HOST = os.getenv(
-    'GEOSERVER_PUBLIC_HOST', SITE_HOST_NAME
-)
-
-GEOSERVER_PUBLIC_PORT = os.getenv(
-    'GEOSERVER_PUBLIC_PORT', 8080
-)
-
-GEOSERVER_PUBLIC_LOCATION = os.getenv(
-    'GEOSERVER_PUBLIC_LOCATION', 'http://{}:{}/geoserver/'.format(GEOSERVER_PUBLIC_HOST, GEOSERVER_PUBLIC_PORT)
-)
-
-OGC_SERVER_DEFAULT_USER = os.getenv(
-    'GEOSERVER_ADMIN_USER', 'admin'
-)
-
-OGC_SERVER_DEFAULT_PASSWORD = os.getenv(
-    'GEOSERVER_ADMIN_PASSWORD', ''
-)
-
-# OGC (WMS/WFS/WCS) Server Settings
-OGC_SERVER = {
-    'default': {
-        'BACKEND': 'geonode.geoserver',
-        'LOCATION': GEOSERVER_LOCATION,
-        'LOGIN_ENDPOINT': 'j_spring_oauth2_geonode_login',
-        'LOGOUT_ENDPOINT': 'j_spring_oauth2_geonode_logout',
-        'PUBLIC_LOCATION': GEOSERVER_PUBLIC_LOCATION,
-        'USER': OGC_SERVER_DEFAULT_USER,
-        'PASSWORD': OGC_SERVER_DEFAULT_PASSWORD,
-        'MAPFISH_PRINT_ENABLED': True,
-        'PRINT_NG_ENABLED': True,
-        'GEONODE_SECURITY_ENABLED': True,
-        'GEOFENCE_SECURITY_ENABLED': GEOFENCE_SECURITY_ENABLED,
-        'GEOFENCE_URL': os.getenv('GEOFENCE_URL', 'internal:/'),
-        'GEOGIG_ENABLED': False,
-        'WMST_ENABLED': False,
-        'BACKEND_WRITE_ENABLED': True,
-        'WPS_ENABLED': False,
-        'LOG_FILE': '%s/geoserver/data/logs/geoserver.log',
-        # Set to dictionary identifier of database containing spatial data in
-        # DATABASES dictionary to enable
-        'DATASTORE': os.getenv('DEFAULT_BACKEND_DATASTORE', 'wmdata'),
-        'PG_GEOGIG': False,
-        # 'CACHE': ".cache"  # local cache file to for HTTP requests
-        'TIMEOUT': int(os.getenv('OGC_REQUEST_TIMEOUT', '30'))  # number of seconds to allow for HTTP requests
-    }
-}
+OGC_SERVER['default']['DATASTORE']= os.getenv('DEFAULT_BACKEND_DATASTORE', 'wmdata')
 
 # If you want to enable Mosaics use the following configuration
 UPLOADER = {
