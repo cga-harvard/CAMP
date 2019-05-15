@@ -84,6 +84,14 @@ class LayerResource(CommonModelApi):
 
 class MapResource(CommonModelApi):
 
+    detail_url = fields.CharField(null=False)
+
     class Meta(CommonMetaApi):
         queryset = Map.objects.all().order_by('-popular_count')
         resource_name = 'maps'
+
+    def dehydrate_detail_url(self, bundle):
+        if bundle.obj.urlsuffix:
+            return '/maps/%s' % bundle.obj.urlsuffix
+        else:
+            return bundle.obj.detail_url
