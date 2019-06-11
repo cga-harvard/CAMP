@@ -35,6 +35,14 @@ camp_api.register(MapResource())
 camp_api.register(OwnerResource())
 camp_api.register(TopicCategoryResource())
 
+urlpatterns = [
+    url(r'', include('geonode_contribs.worldmap.wm_extra.urls',
+        namespace='worldmap')),
+    url(r'', include('geonode_contribs.worldmap.gazetteer.urls',
+        namespace='gazetteer')),
+    url(r'', include('geonode_contribs.worldmap.mapnotes.urls',
+        namespace='mapnotes'))
+    ] + urlpatterns
 
 urlpatterns = [
     # camp additional urls
