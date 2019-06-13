@@ -66,14 +66,14 @@ MANAGERS = ADMINS = os.getenv('ADMINS', [])
 # WorldMap configuration
 INSTALLED_APPS += (PROJECT_NAME,
                    'geoexplorer-worldmap',
-                   'worldmap',
-                   'worldmap.gazetteer',
-                   'worldmap.wm_extra',
-                   'worldmap.mapnotes',
+                   'geonode_worldmap',
+                   'geonode_worldmap.gazetteer',
+                   'geonode_worldmap.wm_extra',
+                   'geonode_worldmap.mapnotes',
                    )
 
 from settings import TEMPLATES
-TEMPLATES[0]['OPTIONS']['context_processors'].append('worldmap.context_processors.resource_urls')
+TEMPLATES[0]['OPTIONS']['context_processors'].append('geonode_worldmap.context_processors.resource_urls')
 
 GEONODE_CLIENT_LOCATION = '/static/worldmap_client/'
 
