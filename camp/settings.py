@@ -399,7 +399,7 @@ SITE_HOST_NAME = os.getenv('SITE_HOST_NAME', "localhost")
 SITE_HOST_PORT = os.getenv('SITE_HOST_PORT', "8000")
 
 # use the WorldMap client
-GEONODE_CLIENT_HOOKSET = 'worldmap.hooksets.WorldMapHookSet'
+GEONODE_CLIENT_HOOKSET = 'geonode_worldmap.hooksets.WorldMapHookSet'
 CORS_ORIGIN_WHITELIST = (
     HOSTNAME
 )
