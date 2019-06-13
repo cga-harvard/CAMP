@@ -66,14 +66,14 @@ MANAGERS = ADMINS = os.getenv('ADMINS', [])
 # WorldMap configuration
 INSTALLED_APPS += (PROJECT_NAME,
                    'geoexplorer-worldmap',
-                   'geonode_contribs.worldmap',
-                   'geonode_contribs.worldmap.gazetteer',
-                   'geonode_contribs.worldmap.wm_extra',
-                   'geonode_contribs.worldmap.mapnotes',
+                   'worldmap',
+                   'worldmap.gazetteer',
+                   'worldmap.wm_extra',
+                   'worldmap.mapnotes',
                    )
 
 from settings import TEMPLATES
-TEMPLATES[0]['OPTIONS']['context_processors'].append('geonode_contribs.worldmap.context_processors.resource_urls')
+TEMPLATES[0]['OPTIONS']['context_processors'].append('worldmap.context_processors.resource_urls')
 
 GEONODE_CLIENT_LOCATION = '/static/worldmap_client/'
 
@@ -399,7 +399,7 @@ SITE_HOST_NAME = os.getenv('SITE_HOST_NAME', "localhost")
 SITE_HOST_PORT = os.getenv('SITE_HOST_PORT', "8000")
 
 # use the WorldMap client
-GEONODE_CLIENT_HOOKSET = 'geonode_contribs.worldmap.hooksets.WorldMapHookSet'
+GEONODE_CLIENT_HOOKSET = 'worldmap.hooksets.WorldMapHookSet'
 CORS_ORIGIN_WHITELIST = (
     HOSTNAME
 )
