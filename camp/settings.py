@@ -268,6 +268,78 @@ MAPBOX_ACCESS_TOKEN = os.environ.get('MAPBOX_ACCESS_TOKEN', '')
 BING_API_KEY = os.environ.get('BING_API_KEY', None)
 TIANDITU_API_KEY = os.environ.get('TIANDITU_API_KEY', None)
 
+MAP_BASELAYERS += [
+    {
+        "source": {"ptype": "gxp_stamensource"},
+        "name": "watercolor",
+        "visibility": False,
+        "group": "background",
+        "title": "Stamen Watercolor"
+    }, {
+        "source": {"ptype": "gxp_stamensource"},
+        "name": "toner",
+        "visibility": False,
+        "group": "background",
+        "title": "Stamen Toner"
+    },{
+        "source": {
+            "url": "http://services.arcgisonline.com/arcgis/rest/services/World_Shaded_Relief/MapServer",
+            "ptype": "gxp_arcgiscachesource"},
+        "group": "background",
+        "name": "World Shaded Relief",
+        "visibility": False,
+        "fixed": True,
+        "format": "jpeg",
+        "tiled" : False,
+        "title": "ESRI World Shaded Relief"
+    },{
+        "source": {
+            "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+            "ptype": "gxp_arcgiscachesource"},
+        "group": "background",
+        "name": "World Street Map",
+        "visibility": False,
+        "fixed": True,
+        "format": "jpeg",
+        "tiled" : False,
+        "title": "ESRI World Street Map"
+    },{
+      "source": {
+          "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+          "ptype": "gxp_arcgiscachesource"},
+      "group": "background",
+      "format": "jpeg",
+      "name": "World Imagery",
+      "visibility": False,
+      "fixed": True,
+      "tiled" : False,
+      "title": "ESRI World Imagery"
+      }, {
+        "source": {
+            "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer",
+            "ptype": "gxp_arcgiscachesource"},
+        "group": "background",
+        "name": "Light Gray Canvas Base",
+        "visibility": False,
+        "fixed": True,
+        "format": "jpeg",
+        "tiled" : False,
+        "title": "ESRI Light Gray Reference"
+    },
+    {
+        "source": {
+            "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer",
+            "ptype": "gxp_arcgiscachesource"},
+        "group": "background",
+        "name": "Dark Gray Canvas Base",
+        "visibility": False,
+        "fixed": True,
+        "format": "jpeg",
+        "tiled" : False,
+        "title": "ESRI Dark Gray Reference"
+    }
+]
+
 if TIANDITU_API_KEY:
     MAP_BASELAYERS += [{
         "source": {
