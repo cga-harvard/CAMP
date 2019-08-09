@@ -559,7 +559,7 @@ CUSTOM_AGREE_TOS_TEXT = _("I agree to the <a href='/aboutus/#disclaimer'>Terms a
 # GEONODE_CLIENT_LOCATION = 'http://localhost:9090/'
 
 # Set TIME_ZONE to Shanghai and close USE_TZ to change the time showed in browser
-USE_TZ = False
+USE_TZ = True
 # Modify language settings
 LANGUAGE_CODE = 'zh-cn'
 MODELTRANSLATION_LANGUAGES = [LANGUAGE_CODE, ]
