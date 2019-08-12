@@ -46,6 +46,10 @@
      <script>
         var siteUrl = '{{ SITEURL }}';
     </script>
+    <script>
+        var siteUrl = '{{ SITEURL }}'.replace(/\/?$/, '/');
+        var staticUrl = '{% static '' %}';
+    </script>
   </head>
 
   <body class="{% block body_class %}{% endblock %}">
