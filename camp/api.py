@@ -68,6 +68,13 @@ class CommonModelApi(ModelResource):
         null=True,
         full=True)
     owner = fields.ToOneField(OwnerResource, 'owner', full=True)
+    thumbnail_url = fields.CharField(null=False)
+
+    def dehydrate_thumbnail_url(self, bundle):
+        if hasattr(bundle.obj, 'curatedthumbnail'):
+            return bundle.obj.curatedthumbnail.img_thumbnail.url
+        else:
+            return bundle.obj.thumbnail_url
 
     def get_object_list(self, request):
         visible_resources = get_objects_for_user(request.user, 'base.view_resourcebase')
