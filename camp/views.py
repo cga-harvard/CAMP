@@ -39,8 +39,11 @@ def map_list_hottest(request):
     count = 0
 
     for resourcebase in resourcebase_queryset:
+        thumb_url = resourcebase.thumbnail_url
+        if hasattr(resourcebase, 'curatedthumbnail'):
+            thumb_url = resourcebase.curatedthumbnail.img_thumbnail.url
         resourcebase_dict[count] = [resourcebase.title, resourcebase.owner.username\
-        , resourcebase.thumbnail_url, resourcebase.detail_url\
+        , thumb_url, resourcebase.detail_url\
         , resourcebase.popular_count\
         , resourcebase.date.strftime("%m-%d  %H:%M")]
         count = count + 1
