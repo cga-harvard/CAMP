@@ -21,16 +21,17 @@ def map_list_hottest(request):
     """
     resourcebase_dict = {}
     count = 0
-    if request.POST.has_key('type'):
-        type = request.POST['type']
+    type = request.GET.get('type', '')
     # if type==admin key='owner_id' elseif type==hottest key=popular_count else type==latest key =date
     # order_by('-key'): the same with order by(key) asce
+
     if type == 'admin':
         key = 'owner_id'
     else:
         key = '-popular_count' if type == 'hottest' else '-date'
-    if request.POST['category'] != '0':
-        categoryid = int(request.POST['category'])
+
+    if request.GET.get('category'):
+        categoryid = int(request.GET.get('category'))
         resourcebase_queryset = ResourceBase.objects.instance_of(Map)\
         .filter(category_id=categoryid).order_by(key)[0:6]
     else:
