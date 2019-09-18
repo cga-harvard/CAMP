@@ -20,8 +20,8 @@ def map_list_hottest(request):
     :return: json of resourcebase
     """
     resourcebase_dict = {}
-    count = 0
-    type = request.GET.get('type', '')
+
+    type = request.POST.get('type', '')
     # if type==admin key='owner_id' elseif type==hottest key=popular_count else type==latest key =date
     # order_by('-key'): the same with order by(key) asce
 
@@ -30,13 +30,17 @@ def map_list_hottest(request):
     else:
         key = '-popular_count' if type == 'hottest' else '-date'
 
-    if request.GET.get('category'):
-        categoryid = int(request.GET.get('category'))
-        resourcebase_queryset = ResourceBase.objects.instance_of(Map)\
-        .filter(category_id=categoryid).order_by(key)[0:6]
-    else:
-        resourcebase_queryset = ResourceBase.objects.instance_of(Map)\
-        .all().order_by(key,'-popular_count')[0:6]
+    resourcebase_queryset = None
+
+    if request.POST.get('category'):
+        categoryid = int(request.POST.get('category'))
+        if categoryid != 0:
+            resourcebase_queryset = ResourceBase.objects.instance_of(Map)\
+            .filter(category_id=categoryid).order_by(key)[0:6]
+        else:
+            resourcebase_queryset = ResourceBase.objects.instance_of(Map)\
+            .all().order_by(key,'-popular_count')[0:6]
+
     count = 0
 
     for resourcebase in resourcebase_queryset:
