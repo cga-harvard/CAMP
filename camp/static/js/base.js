@@ -75,25 +75,26 @@ function showMaps(divIdPrefix, type, category){
 			img = $("#"+curdiv).find("img");
 			$("#"+curdiv).attr("onclick","location='"+mapurl+"'");
 			$("#"+curdiv).children("p")[0].innerHTML = gettext("Title:") + mapname;
-			
+
+					/* DO WE NEED ALL THIS?
             // if(type=="admin"){
             	if(mapurl.split("/")[2]==26||mapurl.split("/")[2]==41||mapurl.split("/")[2]==45||mapurl.split("/")[2]==46||mapurl.split("/")[2]==48||mapurl.split("/")[2]==52||mapurl.split("/")[2]==54||mapurl.split("/")[2]==59||mapurl.split("/")[2]==71||mapurl.split("/")[2]==78||mapurl.split("/")[2]==82||mapurl.split("/")[2]==97||mapurl.split("/")[2]==99||mapurl.split("/")[2]==102||mapurl.split("/")[2]==107||mapurl.split("/")[2]==117||mapurl.split("/")[2]==118||mapurl.split("/")[2]==120||mapurl.split("/")[2]==122||mapurl.split("/")[2]==124||mapurl.split("/")[2]==129||mapurl.split("/")[2]==132||mapurl.split("/")[2]==135||mapurl.split("/")[2]==139){
 					imgurl =window.location.href+"static/img/thumb/map"+mapurl.split("/")[2]+".jpg";
 				}
-
                 if (mapname=="李白行迹图") {
                     imgurl =window.location.href+"static/img/slide-libai.gif"
                 }else if (mapname=="杜甫行迹图") {
                     imgurl =window.location.href+"static/img/slide-dufu.gif"
                 }else if (mapname=="汤显祖行迹图") {
-                    imgurl =window.location.href+"static/img/slide-tangxianzu.gif"                  
+                    imgurl =window.location.href+"static/img/slide-tangxianzu.gif"
                 }else if (mapname=="全宋文专题") {
-                    imgurl =window.location.href+"static/img/slide-quansongwen.gif"                 
+                    imgurl =window.location.href+"static/img/slide-quansongwen.gif"
                 }else if (mapname=="清代妇女作家专题图") {
-                    imgurl =window.location.href+"static/img/slide-qingdaifunv.gif"                   
+                    imgurl =window.location.href+"static/img/slide-qingdaifunv.gif"
                 }else if (mapname=="全元文专题") {
-                    imgurl =window.location.href+"static/img/slide-quanyuanwen.gif"                   
+                    imgurl =window.location.href+"static/img/slide-quanyuanwen.gif"
                 }
+				*/
             // }
             if(type == "hottest"){
             	$("#"+curdiv).children("p")[0].innerHTML += ("<br>" + gettext("Author:") + username);
@@ -150,4 +151,3 @@ function setImgHeight() {
         img.height(height);
     });
 }
-    
