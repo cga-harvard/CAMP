@@ -44,6 +44,6 @@ setup(
     zip_safe=False,
     install_requires=[
        'geonode>=2.10',
-       'geonode-worldmap==0.2',
+       'geonode-worldmap==0.3',
     ],
 )
