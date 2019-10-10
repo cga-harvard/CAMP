@@ -337,6 +337,17 @@ MAP_BASELAYERS += [
         "format": "jpeg",
         "tiled" : False,
         "title": "ESRI Dark Gray Reference"
+    },
+    {
+        "source": {
+            "url": "http://gis.sinica.edu.tw/ccts/wmts",
+            "ptype": "gxp_wmtssource",
+            "title": "二十五萬分一中國圖(AMS L500)",
+            },
+        "group": "background",
+        "name": "AMS_L500",
+        "visibility": False,
+        "fixed": True,
     }
 ]
 

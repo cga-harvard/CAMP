@@ -1,3 +1,3 @@
-django-geoexplorer-worldmap==4.0.68
+django-geoexplorer-worldmap==4.0.72
 geonode-worldmap==0.2
 pygdal==1.11.3.3
