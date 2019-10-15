@@ -348,6 +348,17 @@ MAP_BASELAYERS += [
         "name": "AMS_L500",
         "visibility": False,
         "fixed": True,
+    },
+    {
+        "source": {
+            "url": "https://services.arcgisonline.com/arcgis/rest/services/Demographics/USA_Population_Density/MapServer/WMTS/",
+            "ptype": "gxp_wmtssource",
+            "title": "Demographics_USA_Population_Density",
+            },
+        "group": "background",
+        "name": "Demographics_USA_Population_Density",
+        "visibility": False,
+        "fixed": True,
     }
 ]
 
