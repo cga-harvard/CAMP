@@ -25,9 +25,11 @@ from django.views.defaults import page_not_found
 from tastypie.api import Api
 
 from geonode.urls import urlpatterns
+from geonode_worldmap.wm_extra.views import add_endpoint
 
 from .api import LayerResource, MapResource, OwnerResource, TopicCategoryResource
 from .views import map_list_hottest, selection_list, layer_upload_geojson, layer_upload_wm
+
 
 camp_api = Api(api_name='camp_api')
 camp_api.register(LayerResource())
@@ -52,6 +54,7 @@ urlpatterns = [
     url(r'^aboutus/$',
   	    TemplateView.as_view(template_name='aboutus.html'),
         name='aboutus'),
+    url(r'^maps/add_endpoint?$', add_endpoint, name='add_endpoint'),
     url(r'^maps/list/hottest/$', map_list_hottest, name='map_list_hottest'),
     url(r'^selection/list/$', selection_list, name='selection_list'),
     # geojson upload (temp)
